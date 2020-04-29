@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Laborant',
       theme: ThemeData(
         fontFamily: 'DINNext',
         primaryColor: Colors.white,
