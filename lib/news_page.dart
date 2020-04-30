@@ -51,7 +51,6 @@ class NewsPageState extends State<NewsPage> {
         SliverAppBar(
           title: Text('LABORANT'),
           centerTitle: true,
-          //floating: true,
           pinned: true,
           backgroundColor: Theme.of(context).canvasColor,
         )
