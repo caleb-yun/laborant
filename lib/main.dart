@@ -1,3 +1,5 @@
+import 'package:Laborant/agents_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -53,7 +55,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NewsPage(),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: <Widget>[
+          NewsPage(),
+          AgentsPage(),
+          AgentsPage()
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onTabTapped,
         currentIndex: _currentIndex,
@@ -64,7 +73,11 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.account_circle),
-            title: new Text('STATS?'),
+            title: new Text('STATS'),
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(CupertinoIcons.group_solid),
+            title: new Text('AGENTS'),
           )
         ],
         selectedItemColor: Theme.of(context).accentColor,

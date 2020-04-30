@@ -15,7 +15,13 @@ class WebPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(news.title)),
+      appBar: AppBar(
+        title: Text(news.title),
+        leading: IconButton(
+            icon: Icon(CupertinoIcons.back),
+            onPressed: () => Navigator.of(context).pop()
+        ),
+      ),
       body: WebView(
         initialUrl: news.url,
         javascriptMode: JavascriptMode.unrestricted,
