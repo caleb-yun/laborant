@@ -1,4 +1,4 @@
-name: Laborant
+name: laborant
 description: Valorant Flutter application
 
 # The following line prevents the package from being accidentally published to
@@ -86,3 +86,4 @@ flutter:
 
   assets:
     - assets/
+    - assets/agents/

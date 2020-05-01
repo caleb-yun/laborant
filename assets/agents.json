@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Breach",
+    "type": "Initiator",
+    "img": "assets/agents/Breach.png"
+  },
+  {
+    "name": "Brimstone",
+    "type": "Controller",
+    "img": "assets/agents/Brimstone.png"
+  },
+  {
+    "name": "Cypher",
+    "type": "Sentinel",
+    "img": "assets/agents/Cypher.png"
+  },
+  {
+    "name": "Jett",
+    "type": "Duelist",
+    "img": "assets/agents/Jett.png"
+  },
+  {
+    "name": "Omen",
+    "type": "Controller",
+    "img": "assets/agents/Omen.png"
+  },
+  {
+    "name": "Phoenix",
+    "type": "Duelist",
+    "img": "assets/agents/Phoenix.png"
+  },
+  {
+    "name": "Raze",
+    "type": "Duelist",
+    "img": "assets/agents/Raze.png"
+  },
+  {
+    "name": "Sage",
+    "type": "Sentinel",
+    "img": "assets/agents/Sage.png"
+  },
+  {
+    "name": "Sova",
+    "type": "Initiator",
+    "img": "assets/agents/Sova.png"
+  },
+  {
+    "name": "Viper",
+    "type": "Controller",
+    "img": "assets/agents/Viper.png"
+  }
+]

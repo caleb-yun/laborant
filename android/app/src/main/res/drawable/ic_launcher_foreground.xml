@@ -1,0 +1,11 @@
+<!-- drawable/beaker-outline.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="59.636364"
+    android:viewportHeight="59.636364">
+  <group android:translateX="17.818182"
+      android:translateY="17.818182">
+      <path android:fillColor="#ff4655" android:pathData="M3,3H21V5A2,2 0 0,0 19,7V19A2,2 0 0,1 17,21H7A2,2 0 0,1 5,19V7A2,2 0 0,0 3,5V3M7,5V7H12V8H7V9H10V10H7V11H10V12H7V13H12V14H7V15H10V16H7V19H17V5H7Z" />
+  </group>
+</vector>
