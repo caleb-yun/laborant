@@ -25,7 +25,7 @@ class MainApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData(
-          fontFamily: 'DINNext',
+        fontFamily: 'DINNext',
         brightness: Brightness.dark,
         accentColor: Color(0xffff4655),
       ),
