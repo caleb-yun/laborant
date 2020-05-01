@@ -1,4 +1,4 @@
-import 'package:Laborant/agents_page.dart';
+import 'package:laborant/agents_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,9 +14,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Colors.black12
-    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Laborant',
@@ -48,12 +45,29 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with WidgetsBindingObserver{
 
   int _currentIndex = 0;
+  BuildContext _appContext;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+
+    _appContext = context;
+    _setSystemTheme();
+
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
@@ -91,5 +105,28 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _currentIndex = index;
     });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _setSystemTheme();
+    }
+  }
+
+  void _setSystemTheme() {
+    if (MediaQuery.of(_appContext).platformBrightness == Brightness.dark) {
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+          statusBarColor: Color(0),
+          systemNavigationBarColor: Colors.black,
+          systemNavigationBarIconBrightness: Brightness.light
+      ));
+    } else {
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+          statusBarColor: Color(0),
+          systemNavigationBarColor: Colors.grey[200],
+          systemNavigationBarIconBrightness: Brightness.dark
+      ));
+    }
   }
 }
