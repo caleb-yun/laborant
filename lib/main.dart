@@ -2,6 +2,7 @@ import 'package:laborant/agents_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:laborant/stats_page.dart';
 
 import 'news_page.dart';
 
@@ -73,7 +74,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver{
         index: _currentIndex,
         children: <Widget>[
           NewsPage(),
-          AgentsPage(),
+          StatsPage(),
           AgentsPage()
         ],
       ),
@@ -90,8 +91,8 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver{
             title: new Text('STATS'),
           ),
           BottomNavigationBarItem(
-            icon: new Icon(CupertinoIcons.group_solid),
-            title: new Text('AGENTS'),
+            icon: new Icon(Icons.library_books),
+            title: new Text('GUIDES'),
           )
         ],
         selectedItemColor: Theme.of(context).accentColor,
