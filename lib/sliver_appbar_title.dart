@@ -35,7 +35,7 @@ class _SABTState extends State<SliverAppBarTitle> {
   }
   void _positionListener() {
     final FlexibleSpaceBarSettings settings =
-    context.inheritFromWidgetOfExactType(FlexibleSpaceBarSettings);
+      context.dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>();
     bool visible = settings == null || settings.currentExtent <= settings.minExtent;
     if (_visible != visible) {
       setState(() {
@@ -45,8 +45,9 @@ class _SABTState extends State<SliverAppBarTitle> {
   }
   @override
   Widget build(BuildContext context) {
-    return Visibility(
-      visible: _visible,
+    return AnimatedOpacity(
+      opacity: _visible ? 1 : 0,
+      duration: Duration(milliseconds: 150),
       child: widget.child,
     );
   }
