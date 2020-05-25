@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:laborant/sliver_appbar_title.dart';
 
 class AgentDetailPage extends StatefulWidget {
@@ -34,7 +33,7 @@ class AgentDetailPageState extends State<AgentDetailPage> {
             //brightness: Brightness.dark,
             //iconTheme: ThemeData.dark().iconTheme,
             //backgroundColor: Color(0xFF0F1923),
-            expandedHeight: 360,
+            expandedHeight: 350,
             pinned: true,
             floating: false,
             centerTitle: true,
@@ -54,7 +53,7 @@ class AgentDetailPageState extends State<AgentDetailPage> {
                           top: 48,
                           child: Image.asset(agent['img'], width: 380, fit: BoxFit.cover)
                       ),
-                      Positioned(
+                      /*Positioned(
                         top: 320,
                         left: 0,
                         child: Card(
@@ -66,7 +65,7 @@ class AgentDetailPageState extends State<AgentDetailPage> {
                             height: 100,
                           ),
                         ),
-                      ),
+                      ),*/
                       Positioned(
                         top: 42,
                         left: 18,
@@ -76,8 +75,9 @@ class AgentDetailPageState extends State<AgentDetailPage> {
                                 Text(agent['name'].toString().toUpperCase(),
                                     style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700)),
                                 Chip(
-                                  label: Text(agent['type'], style: TextStyle(color: Colors.white70)),
-                                  backgroundColor: Color(0xFF273039),
+                                  label: Text(agent['type'], style: TextStyle(color: Colors.white)),
+                                  //backgroundColor: Color(0xFF273039),
+                                  backgroundColor: Color(0xffff4655),
                                 ),
                               ])
                       ),
@@ -90,10 +90,21 @@ class AgentDetailPageState extends State<AgentDetailPage> {
         body: SingleChildScrollView(
             physics: new ClampingScrollPhysics(),
               child: Container(
-              color: Color(0xFF0F1923),
-              margin: EdgeInsets.all(0),
-              child: _buildBody(),
-            )
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      shape: BoxShape.rectangle,
+                  ),
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: Color(0xFF0F1923),
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24))
+                      ),
+                      margin: EdgeInsets.all(0),
+                      child: _buildBody(),
+                    )
+              )
+
         )
       )
     );
@@ -101,7 +112,7 @@ class AgentDetailPageState extends State<AgentDetailPage> {
 
   Widget _buildBody() {
     return Padding(
-      padding: EdgeInsets.only(top: 0, bottom: 4, left: 12, right: 12),
+      padding: EdgeInsets.only(top: 12, bottom: 6, left: 12, right: 12),
         child:Column(
       children: <Widget>[
         _buildAbility(agent['abilities'][0]),
@@ -126,7 +137,10 @@ class AgentDetailPageState extends State<AgentDetailPage> {
                     children: [
                   Visibility(
                     visible: ability['type'].toString() != 'Ultimate' && ability['cost'] != 'Free',
-                    child: Image.asset('assets/Creds.png', height: 6, width: 6),
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 2, bottom: 2),
+                        child: Image.asset('assets/Creds.png', height: 6, width: 6)
+                    ),
                   ),
                   Text(ability['cost'].toString().toUpperCase(), style: TextStyle(fontSize: 14, color: Colors.white))
                 ])

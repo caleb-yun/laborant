@@ -1,7 +1,7 @@
-import 'package:laborant/agents_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:laborant/guides_page.dart';
 import 'package:laborant/stats_page.dart';
 
 import 'news_page.dart';
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver{
         children: <Widget>[
           NewsPage(),
           StatsPage(),
-          AgentsPage()
+          GuidesPage()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

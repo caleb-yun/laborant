@@ -1,0 +1,196 @@
+{
+  "sidearm": [
+    {
+      "name": "Classic",
+      "img": "assets/weapons/Classic.png",
+      "type": "Sidearm",
+      "creds": "Free",
+      "primaryFire": "Semi-Automatic\nFire Rate 6.75 rounds/sec",
+      "alternateFire": "3-round Burst\nFire Rate: 2.22 rounds/sec",
+      "damage": "Body 26 | Head 78 | Leg 22 0-30m\nBody 22 | Head 66 | Leg 18  30-50m",
+      "magazine": "12",
+      "wallPenetration": "Low"
+    },
+    {
+      "name": "Shorty",
+      "img": "assets/weapons/Shorty.png",
+      "type": "Sidearm",
+      "creds": "200",
+      "primaryFire": "Semi-Automatic\nFire Rate 3.3 rounds/sec",
+      "damage": "Body 12 | Head 36 | Leg 10\t0-9m\nBody 8 | Head 24 | Leg 6\t9-15m",
+      "magazine": "2",
+      "wallPenetration": "Low"
+    },
+    {
+      "name": "Frenzy",
+      "img": "assets/weapons/Frenzy.png",
+      "type": "Sidearm",
+      "creds": "400",
+      "primaryFire": "Full-automatic\nFire Rate 10 rounds/sec",
+      "damage": "Body 26 | Head 78 | Leg 22\t0-20m\nBody 21 | Head 63 | Leg 17\t20-50m",
+      "magazine": "13",
+      "wallPenetration": "Low"
+    },
+    {
+      "name": "Ghost",
+      "img": "assets/weapons/Ghost.png",
+      "type": "Sidearm",
+      "creds": "500",
+      "primaryFire": "Semi-automatic\nFire Rate 6.75 rounds/sec",
+      "damage": "Body 30 | Head 105 | Leg 26\t0-30m\nBody 25 | Head 88 | Leg 21\t30-50m",
+      "magazine": "15",
+      "wallPenetration": "Medium"
+    },
+    {
+      "name": "Sheriff",
+      "img": "assets/weapons/Sheriff.png",
+      "type": "Sidearm",
+      "creds": "800",
+      "primaryFire": "Semi-Automatic\nFire Rate 4 rounds/sec",
+      "damage": "Body 55 | Head 160 | Leg 47\t0-30m\nBody 50 | Head 145 | Leg 43\t30-50m",
+      "magazine": "6",
+      "wallPenetration": "High"
+    }
+  ],
+  "smg": [
+    {
+      "name": "Stinger",
+      "img": "assets/weapons/Stinger.png",
+      "type": "SMG",
+      "creds": "1,000",
+      "primaryFire": "Full-automatic\nFire Rate 18 rounds/sec",
+      "alternateFire": "Zoom Mode (1.15x), 4 round burst, spread reduction\nFire Rate: 4 rounds/sec",
+      "damage": "Body 27 | Head 67 | Leg 23\t0-20m\nBody 25 | Head 62 | Leg 21\t20-50m",
+      "magazine": "20",
+      "wallPenetration": "Low"
+    },
+    {
+      "name": "Spectre",
+      "img": "assets/weapons/Spectre.png",
+      "type": "SMG",
+      "creds": "1,600",
+      "primaryFire": "Full-automatic\nFire Rate 13.33 rounds/sec",
+      "alternateFire": "Zoom Mode 1.15x, spread reduction\nFire Rate 12 rounds/sec",
+      "damage": "Body 26 | Head 78 | Leg 22\t0-20m\nBody 22 | Head 66 | Leg 18\t20-50m",
+      "magazine": "30",
+      "wallPenetration": "Medium"
+    }
+  ],
+  "rifle": [
+    {
+      "name": "Bulldog",
+      "img": "assets/weapons/Bulldog.png",
+      "creds": "2,100",
+      "type": "Rifle",
+      "magazine": "24",
+      "wallPenetration": "Medium",
+      "primaryFire": "Full-Automatic\nFire Rate 9.15 rounds/sec",
+      "alternateFire": "Zoom Mode 1.25x, 3-Round burst\nFire Rate 4 rounds/sec",
+      "damage": "Body 35 | Head 116 | Leg 30\t0-50m"
+    },
+    {
+      "name": "Guardian",
+      "img": "assets/weapons/Guardian.png",
+      "type": "Rifle",
+      "creds": "2,700",
+      "primaryFire": "Semi-automatic\nFire Rate 6.5 rounds/sec",
+      "alternateFire": "Zoom Mode 1.5x, slight spread reduction\nFire Rate 6.5 rounds/sec",
+      "damage": "Body 65 | Head 195 | Leg 49\t0-50m",
+      "magazine": "12",
+      "wallPenetration": "Medium"
+    },
+    {
+      "name": "Phantom",
+      "img": "assets/weapons/Phantom.png",
+      "type": "Rifle",
+      "creds": "2,900",
+      "primaryFire": "Full-automatic\nFire Rate 11 rounds/sec",
+      "alternateFire": "Zoom Mode 1.25x, slight spread reduction\nFire Rate 9.9 rounds/sec",
+      "damage": "Body 39 | Head 156 | Leg 33\t0-15m\nBody 35 | Head 140 | Leg 30\t15-30m\nBody 31 | Head 124 | Leg 26\t30-50m",
+      "magazine": "30",
+      "wallPenetration": "Medium"
+    },
+    {
+      "name": "Vandal",
+      "img": "assets/weapons/Vandal.png",
+      "type": "Rifle",
+      "creds": "2,900",
+      "primaryFire": "Full-automatic\nFire Rate 9.25 rounds/sec",
+      "alternateFire": "Zoom Mode 1.25x, slight spread reduction\nFire Rate 8.32 rounds/sec",
+      "damage": "Body 39 | Head - 156 | Leg 33\t0-50m",
+      "magazine": "25",
+      "wallPenetration": "Medium"
+    }
+  ],
+  "shotgun": [
+    {
+      "name": "Bucky",
+      "img": "assets/weapons/Bucky.png",
+      "type": "Shotgun",
+      "creds": "900",
+      "primaryFire": "Semi-automatic\nFire Rate 1.1 rounds/sec",
+      "alternateFire": "Semi-automatic Air Burst (extended primary fire shot)\nFire Rate 1.1 rounds/sec",
+      "Damage": "Body 22 | Head 44 | Leg 19\t0-8m\nBody 17 | Head 34 | Leg 14\t8-12m\nBody 9 | Head 18 | Leg 8\t12-50m",
+      "magazine": "5",
+      "wallPenetration": "Low"
+    },
+    {
+      "name": "Judge",
+      "img": "assets/weapons/Judge.png",
+      "type": "Shotgun",
+      "creds": "1,500",
+      "primaryFire": "Full-automatic\nFire Rate 3.5 rounds/sec",
+      "damage": "Body 17 | Head 34 | Leg 14\t0-10m\nBody 13 | Head 26 | Leg 11/t10-15m\nBody 10 | Head 20 | Leg 9\t15 - 50m",
+      "magazine": "7",
+      "wallPenetration": "Medium"
+    }
+  ],
+  "heavy": [
+    {
+      "name": "Ares",
+      "img": "assets/weapons/Ares.png",
+      "type": "Heavy",
+      "creds": "1,700",
+      "primaryFire": "Full-automatic\nFire Rate 10 to 13 rounds/sec (increasing during fire)",
+      "alternateFire": "Zoom Mode 1.25x, slight spread reduction\nFire Rate 10 to 13 rounds/sec (increasing during fire)",
+      "damage": "Body 30 | Head 72 | Leg 25\t0-30m\nBody 28 | Head 67 | Leg 23\t30-50m",
+      "magazine": "50",
+      "wallPenetration": "High"
+    },
+    {
+      "name": "Odin",
+      "img": "assets/weapons/Odin.png",
+      "type": "Heavy",
+      "creds": "3,200",
+      "magazine": "100",
+      "wallPenetration": "High",
+      "primaryFire": "Full-automatic\nFire Rate 12 to 15.6 rounds/sec (increasing during fire)",
+      "alternateFire": "Zoom Mode 1.25x, slight spread reduction\nFire Rate 15.6 rounds/sec",
+      "damage": "Body 38 | Head 95 | Leg 32\t0-30m\nBody 31 | Head 77 | Leg 26\t30-50m"
+    }
+  ],
+  "sniper": [
+    {
+      "name": "Marshal",
+      "img": "assets/weapons/Marshal.png",
+      "type": "Sniper",
+      "creds": "1,100",
+      "primaryFire": "Semi-automatic\nFire Rate 1.5 rounds/sec",
+      "alternateFire": "Zoom Mode 2.5x, slight spread reduction\nFire Rate 1.2 rounds/sec",
+      "damage": "Body 101 | Head 202 | Leg 85\t0-50m",
+      "magazine": "5",
+      "wallPenetration": "Medium"
+    },
+    {
+      "name": "Operator",
+      "img": "assets/weapons/Operator.png",
+      "type": "Sniper",
+      "creds": "4,500",
+      "primaryFire": "Semi-automatic\nFire Rate 0.75 rounds/sec",
+      "alternateFire": "Zoom Mode Dual-Zoom Mode (2.5x or 5x), significant spread reduction\nFire Rate 0.75 rounds/sec",
+      "damage": "Body 150 | Head 255 | Leg 127\t0-50m",
+      "magazine": "5",
+      "wallPenetration": "High"
+    }
+  ]
+}

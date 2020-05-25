@@ -37,7 +37,7 @@ class AgentsPageState extends State<AgentsPage> {
           itemBuilder: (BuildContext context, int index) {
             Map agent = _agentList[index];
             return Card(
-              margin: EdgeInsets.only(top: 36, bottom: 52, left: 8, right: 8),
+              margin: EdgeInsets.only(top: 64, bottom: 120, left: 8, right: 8),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               elevation: 4,
               clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -67,6 +67,7 @@ class AgentsPageState extends State<AgentsPage> {
             );
           },
           itemCount: _agentList.length,
+          index: 0,
           viewportFraction: 0.7,
           scale: 0.9,
         )
