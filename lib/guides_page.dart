@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:laborant/agents_page.dart';
 import 'package:laborant/weapons_page.dart';
@@ -19,6 +20,10 @@ class GuidesPageState extends State<GuidesPage> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: Theme.of(context).canvasColor,
+        leading: IconButton(
+            icon: Icon(CupertinoIcons.back),
+            onPressed: () => Navigator.of(context).pop()
+        ),
       ),
       body: ListView(
         children: <Widget>[

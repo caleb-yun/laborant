@@ -17,6 +17,7 @@ class AgentsPage extends StatefulWidget {
 class AgentsPageState extends State<AgentsPage> {
 
   List _agentList = [];
+  SwiperController _swiperController = new SwiperController();
 
   @override
   void initState() {
@@ -32,12 +33,16 @@ class AgentsPageState extends State<AgentsPage> {
           centerTitle: true,
           elevation: 0,
           backgroundColor: Theme.of(context).canvasColor,
+          leading: IconButton(
+            icon: Icon(CupertinoIcons.back),
+            onPressed: () => Navigator.of(context).pop()
+          ),
       ),
-      body:  Swiper(
+      body: Swiper(
           itemBuilder: (BuildContext context, int index) {
             Map agent = _agentList[index];
             return Card(
-              margin: EdgeInsets.only(top: 64, bottom: 120, left: 8, right: 8),
+              margin: EdgeInsets.only(top: 64, bottom: 110, left: 8, right: 8),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               elevation: 4,
               clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -67,9 +72,9 @@ class AgentsPageState extends State<AgentsPage> {
             );
           },
           itemCount: _agentList.length,
-          index: 0,
           viewportFraction: 0.7,
           scale: 0.9,
+        controller: _swiperController,
         )
     );
   }
@@ -79,7 +84,9 @@ class AgentsPageState extends State<AgentsPage> {
 
     _agentList = json.decode(body);
 
-    setState(() {});
+    setState(() {
+      _swiperController.move(0, animation: false);
+    });
 
   }
 

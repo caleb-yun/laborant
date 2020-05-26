@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -30,6 +31,10 @@ class WeaponsPageState extends State<WeaponsPage> {
             centerTitle: true,
             elevation: 0,
             backgroundColor: Theme.of(context).canvasColor,
+            leading: IconButton(
+                icon: Icon(CupertinoIcons.back),
+                onPressed: () => Navigator.of(context).pop()
+            ),
             bottom: TabBar(
                 isScrollable: true,
                 tabs: <Widget>[
