@@ -19,16 +19,17 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Laborant',
       theme: ThemeData(
-        fontFamily: 'DINNext',
-        primaryColor: Colors.white,
-        primaryColorDark: Colors.white70,
-        accentColor: Color(0xffff4655),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+          fontFamily: 'DINNext',
+          primaryColor: Colors.white,
+          primaryColorDark: Colors.white70,
+          accentColor: Color(0xffff4655),
+          bottomSheetTheme: BottomSheetThemeData(backgroundColor: Color(0x0))
       ),
       darkTheme: ThemeData(
-        fontFamily: 'DINNext',
-        brightness: Brightness.dark,
-        accentColor: Color(0xffff4655),
+          fontFamily: 'DINNext',
+          brightness: Brightness.dark,
+          accentColor: Color(0xffff4655),
+          bottomSheetTheme: BottomSheetThemeData(backgroundColor: Color(0x0))
       ),
       home: HomePage(),
     );

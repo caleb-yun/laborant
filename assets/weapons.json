@@ -130,7 +130,7 @@
       "creds": "900",
       "primaryFire": "Semi-automatic\nFire Rate 1.1 rounds/sec",
       "alternateFire": "Semi-automatic Air Burst (extended primary fire shot)\nFire Rate 1.1 rounds/sec",
-      "Damage": "Body 22 | Head 44 | Leg 19\t0-8m\nBody 17 | Head 34 | Leg 14\t8-12m\nBody 9 | Head 18 | Leg 8\t12-50m",
+      "damage": "Body 22 | Head 44 | Leg 19\t0-8m\nBody 17 | Head 34 | Leg 14\t8-12m\nBody 9 | Head 18 | Leg 8\t12-50m",
       "magazine": "5",
       "wallPenetration": "Low"
     },

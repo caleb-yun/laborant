@@ -120,7 +120,7 @@ class NewsPageState extends State<NewsPage> {
       if (news.url.contains('playvalorant.com')) {
         Navigator.push(
             context,
-            new MaterialPageRoute(
+            new CupertinoPageRoute(
                 builder: (context) => WebPage(news: news))
         );
       } else
@@ -144,7 +144,7 @@ class NewsPageState extends State<NewsPage> {
 
         String newsUrl = item.querySelector('a').attributes['href'];
         News news = new News()
-          ..title = item.querySelector('h5').text
+          ..title = item.querySelector('h5').text.replaceAll('â', '\'')
           ..url = newsUrl.contains('http') ? newsUrl : 'https://beta.playvalorant.com'+newsUrl
           ..date =
               item.querySelector('p.NewsCard-module--published--37jmR').text

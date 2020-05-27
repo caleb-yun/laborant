@@ -19,11 +19,7 @@ class GuidesPageState extends State<GuidesPage> {
         title: Text('GUIDES'),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Theme.of(context).canvasColor,
-        leading: IconButton(
-            icon: Icon(CupertinoIcons.back),
-            onPressed: () => Navigator.of(context).pop()
-        ),
+        backgroundColor: Theme.of(context).canvasColor
       ),
       body: ListView(
         children: <Widget>[
@@ -35,7 +31,7 @@ class GuidesPageState extends State<GuidesPage> {
     );
   }
 
-  Widget _buildItem(String title, String imgPath, WidgetBuilder builder) {
+  Widget _buildItem(String title, String imgPath, WidgetBuilder routeBuilder) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
@@ -45,20 +41,20 @@ class GuidesPageState extends State<GuidesPage> {
       clipBehavior: Clip.antiAlias,
       child: InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: builder));
+            Navigator.push(context, CupertinoPageRoute(builder: routeBuilder));
           },
 
           child: Ink(
               height: 220,
               padding: EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Color(0xFF0F1923),
-                  /*image: DecorationImage(
-                      image: AssetImage(imgPath), fit: BoxFit.cover)*/
+                //color: Color(0xFF0F1923),
+                  image: DecorationImage(
+                      image: AssetImage(imgPath), fit: BoxFit.cover)
               ),
               child: Center(child: Text(
                   title.toUpperCase(),
-                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: Colors.white70)
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: Colors.white)
               ))
           )
       )

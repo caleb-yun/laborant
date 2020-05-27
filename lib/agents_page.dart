@@ -48,7 +48,7 @@ class AgentsPageState extends State<AgentsPage> {
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(
+                  Navigator.push(context, CupertinoPageRoute(
                     builder: (context) => AgentDetailPage(agent: agent))
                   );
                 },
