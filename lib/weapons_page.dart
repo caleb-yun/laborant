@@ -115,12 +115,10 @@ class WeaponsPageState extends State<WeaponsPage> {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(16),
                     topLeft: Radius.circular(16))),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-                children: [
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
               Container(
                   padding:
-                      EdgeInsets.only(top: 24, bottom: 18, left: 24, right: 24),
+                      EdgeInsets.only(top: 48, bottom: 48, left: 32, right: 32),
                   child: Image.asset(weapon['img'], height: 72)),
               Text(
                 weapon['name'].toString().toUpperCase(),
@@ -140,18 +138,20 @@ class WeaponsPageState extends State<WeaponsPage> {
                 ),
               ),
               ListTile(title: Text('Damage'), subtitle: Text(weapon['damage'])),
-              Row(children: [
-                Expanded(
-                  child: ListTile(
-                      title: Text('Magazine Capacity'),
-                      subtitle: Text(weapon['magazine'])),
-                ),
-                Expanded(
-                  child: ListTile(
-                      title: Text('Wall Penetration'),
-                      subtitle: Text(weapon['wallPenetration'])),
-                )
-              ])
+              Padding(
+                  padding: EdgeInsets.only(bottom: 16),
+                  child: Row(children: [
+                    Expanded(
+                      child: ListTile(
+                          title: Text('Magazine Capacity'),
+                          subtitle: Text(weapon['magazine'])),
+                    ),
+                    Expanded(
+                      child: ListTile(
+                          title: Text('Wall Penetration'),
+                          subtitle: Text(weapon['wallPenetration'])),
+                    )
+                  ]))
             ]),
           );
         });

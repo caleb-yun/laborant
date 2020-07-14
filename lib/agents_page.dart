@@ -17,12 +17,11 @@ class AgentsPage extends StatefulWidget {
 class AgentsPageState extends State<AgentsPage> {
 
   List _agentList = [];
-  SwiperController _swiperController = new SwiperController();
 
   @override
   void initState() {
-    _fetchData();
     super.initState();
+    _fetchData();
   }
 
   @override
@@ -38,7 +37,7 @@ class AgentsPageState extends State<AgentsPage> {
             onPressed: () => Navigator.of(context).pop()
           ),
       ),
-      body: Swiper(
+      body: _agentList.length == 0 ? Container() : new Swiper(
           itemBuilder: (BuildContext context, int index) {
             Map agent = _agentList[index];
             return Card(
@@ -74,7 +73,7 @@ class AgentsPageState extends State<AgentsPage> {
           itemCount: _agentList.length,
           viewportFraction: 0.7,
           scale: 0.9,
-        controller: _swiperController,
+          index: 0
         )
     );
   }
@@ -82,12 +81,9 @@ class AgentsPageState extends State<AgentsPage> {
   Future<void> _fetchData() async {
     String body = await rootBundle.loadString('assets/agents.json');
 
-    _agentList = json.decode(body);
-
     setState(() {
-      _swiperController.move(0, animation: false);
+      _agentList = json.decode(body);
     });
-
   }
 
 }

@@ -1,5 +1,75 @@
 [
   {
+    "name": "Jett",
+    "type": "Duelist",
+    "img": "assets/agents/jett/Jett.png",
+    "abilities": [
+      {
+        "name": "Cloudburst",
+        "img": "assets/agents/jett/Cloudburst.png",
+        "type": "Basic",
+        "cost": "100",
+        "description": "Instantly throw a projectile that expands into a brief vision cloud on impact with a surface. Hold the ability key to curve the cloud in the direction of your crosshair."
+      },
+      {
+        "name": "Updraft",
+        "img": "assets/agents/jett/Updraft.png",
+        "type": "Basic",
+        "cost": "200",
+        "description": "Instantly propel Jett high into the air."
+      },
+      {
+        "name": "Tailwind",
+        "img": "assets/agents/jett/Tailwind.png",
+        "type": "Signature",
+        "cost": "Free",
+        "description": "Instantly propel in the direction she is moving. If Jett is standing still, she will propel forward."
+      },
+      {
+        "name": "Blade Storm",
+        "img": "assets/agents/jett/Blade_Storm.png",
+        "type": "Ultimate",
+        "cost": "6 Points",
+        "description": "Equip a set of highly accurate throwing knives that recharge on an opponent. Fire to throw a single knife at your target. Alternative Fire to throw all remaining daggers at your target."
+      }
+    ]
+  },
+  {
+    "name": "Raze",
+    "type": "Duelist",
+    "img": "assets/agents/raze/Raze.png",
+    "abilities": [
+      {
+        "name": "Boom Bot",
+        "img": "assets/agents/raze/Boom_Bot.png",
+        "type": "Basic",
+        "cost": "200",
+        "description": "Equip a Boom Bot. Fire will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them."
+      },
+      {
+        "name": "Blast Pack",
+        "img": "assets/agents/raze/Blast_Pack.png",
+        "type": "Basic",
+        "cost": "100",
+        "description": "Instantly throw a Blast Pack that will stick to surfaces. Re-us the ability after deployment to detonate, damaging and moving anything hit. Raze isn't damaged by this ability, but will still take fall damage if launched up far enough."
+      },
+      {
+        "name": "Paint Shells",
+        "img": "assets/agents/raze/Paint_Shells.png",
+        "type": "Signature",
+        "cost": "Free",
+        "description": "Equip a cluster grenade. Fire to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range."
+      },
+      {
+        "name": "Showstopper",
+        "img": "assets/agents/raze/Showstopper.png",
+        "type": "Ultimate",
+        "cost": "6 Points",
+        "description": "Raze equips a single-use rocket launcher with the ability to one-shot enemies. Damage from this ability is consistent throughout the entire blast radius."
+      }
+    ]
+  },
+  {
     "name": "Breach",
     "type": "Initiator",
     "img": "assets/agents/breach/Breach.png",
@@ -31,6 +101,41 @@
         "type": "Ultimate",
         "cost": "7 Points",
         "description": "Equip a seismic charge. Fire to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
+      }
+    ]
+  },
+  {
+    "name": "Omen",
+    "type": "Controller",
+    "img": "assets/agents/omen/Omen.png",
+    "abilities": [
+      {
+        "name": "Shrouded Step",
+        "img": "assets/agents/omen/Shrouded_Step.png",
+        "type": "Basic",
+        "cost": "100",
+        "description": "Equip a shadow walk ability and see its range indicator. Fire to begin a brief channel, then teleport to the marked location."
+      },
+      {
+        "name": "Paranoia",
+        "img": "assets/agents/omen/Paranoia.png",
+        "type": "Basic",
+        "cost": "200",
+        "description": "Instantly fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls."
+      },
+      {
+        "name": "Dark Cover",
+        "img": "assets/agents/omen/Dark_Cover.png",
+        "type": "Signature",
+        "cost": "Free",
+        "description": "Equip a shadow orb and see its range indicator. Fire to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. Hold Alternate Fire while targeting to move the marker further away. Hold the ability key with targeting to move the market closer."
+      },
+      {
+        "name": "From the Shadows",
+        "img": "assets/agents/omen/From_the_Shadows.png",
+        "type": "Ultimate",
+        "cost": "7 Points",
+        "description": "Equip a tactical map. Fire to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport."
       }
     ]
   },
@@ -70,113 +175,6 @@
     ]
   },
   {
-    "name": "Cypher",
-    "type": "Sentinel",
-    "img": "assets/agents/cypher/Cypher.png",
-    "abilities": [
-      {
-        "name": "Trapwire",
-        "img": "assets/agents/cypher/Trapwire.png",
-        "type": "Basic",
-        "cost": "200",
-        "description": "Equip a trapwire. Fire to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be redeployed."
-      },
-      {
-        "name": "Cyber Cage",
-        "img": "assets/agents/cypher/Cyber_Cage.png",
-        "type": "Basic",
-        "cost": "100",
-        "description": "Equip a cyber cage. Fire to toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it."
-      },
-      {
-        "name": "Spycam",
-        "img": "assets/agents/cypher/Spycam.png",
-        "type": "Signature",
-        "cost": "Free",
-        "description": "Equip a spycam. Fire to place the spycam at the targeted location. REUSE this ability to take control of the camera's view. While in control of the camera. Fire to shoot a marking dart. This dart will reveal the location of any player struck by the dart."
-      },
-      {
-        "name": "Neural Theft",
-        "img": "assets/agents/cypher/Neural_Theft.png",
-        "type": "Ultimate",
-        "cost": "7 Points",
-        "description": "Instantly use on a dead enemy player in your crosshairs to reveal the location of all living enemy players."
-      }
-    ]
-  },
-  {
-    "name": "Jett",
-    "type": "Duelist",
-    "img": "assets/agents/jett/Jett.png",
-    "abilities": [
-      {
-        "name": "Cloudburst",
-        "img": "assets/agents/jett/Cloudburst.png",
-        "type": "Basic",
-        "cost": "100",
-        "description": "Instantly throw a projectile that expands into a brief vision cloud on impact with a surface. Hold the ability key to curve the cloud in the direction of your crosshair."
-      },
-      {
-        "name": "Updraft",
-        "img": "assets/agents/jett/Updraft.png",
-        "type": "Basic",
-        "cost": "200",
-        "description": "Instantly propel Jett high into the air."
-      },
-      {
-        "name": "Tailwind",
-        "img": "assets/agents/jett/Tailwind.png",
-        "type": "Signature",
-        "cost": "Free",
-        "description": "Instantly propel in the direction she is moving. If Jett is standing still, she will propel forward."
-      },
-      {
-        "name": "Blade Storm",
-        "img": "assets/agents/jett/Blade_Storm.png",
-        "type": "Ultimate",
-        "cost": "6 Points",
-        "description": "Equip a set of highly accurate throwing knives that recharge on an opponent. Fire to throw a single knife at your target. Alternative Fire to throw all remaining daggers at your target."
-      }
-    ]
-
-  },
-  {
-    "name": "Omen",
-    "type": "Controller",
-    "img": "assets/agents/omen/Omen.png",
-    "abilities": [
-      {
-        "name": "Shrouded Step",
-        "img": "assets/agents/omen/Shrouded_Step.png",
-        "type": "Basic",
-        "cost": "100",
-        "description": "Equip a shadow walk ability and see its range indicator. Fire to begin a brief channel, then teleport to the marked location."
-      },
-      {
-        "name": "Paranoia",
-        "img": "assets/agents/omen/Paranoia.png",
-        "type": "Basic",
-        "cost": "200",
-        "description": "Instantly fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls."
-      },
-      {
-        "name": "Dark Cover",
-        "img": "assets/agents/omen/Dark_Cover.png",
-        "type": "Signature",
-        "cost": "Free",
-        "description": "Equip a shadow orb and see its range indicator. Fire to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. Hold Alternate Fire while targeting to move the marker further away. Hold the ability key with targeting to move the market closer."
-      },
-      {
-        "name": "From the Shadows",
-        "img": "assets/agents/omen/From_the_Shadows.png",
-        "type": "Ultimate",
-        "cost": "7 Points",
-        "description": "Equip a tactical map. Fire to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport."
-      }
-    ]
-
-  },
-  {
     "name": "Phoenix",
     "type": "Duelist",
     "img": "assets/agents/phoenix/Phoenix.png",
@@ -208,42 +206,6 @@
         "type": "Ultimate",
         "cost": "6 Points",
         "description": "Instantly place a marker at Phoenix's location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health."
-      }
-    ]
-
-  },
-  {
-    "name": "Raze",
-    "type": "Duelist",
-    "img": "assets/agents/raze/Raze.png",
-    "abilities": [
-      {
-        "name": "Boom Bot",
-        "img": "assets/agents/raze/Boom_Bot.png",
-        "type": "Basic",
-        "cost": "200",
-        "description": "Equip a Boom Bot. Fire will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them."
-      },
-      {
-        "name": "Blast Pack",
-        "img": "assets/agents/raze/Blast_Pack.png",
-        "type": "Basic",
-        "cost": "100",
-        "description": "Instantly throw a Blast Pack that will stick to surfaces. Re-us the ability after deployment to detonate, damaging and moving anything hit. Raze isn't damaged by this ability, but will still take fall damage if launched up far enough."
-      },
-      {
-        "name": "Paint Shells",
-        "img": "assets/agents/raze/Paint_Shells.png",
-        "type": "Signature",
-        "cost": "Free",
-        "description": "Equip a cluster grenade. Fire to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range."
-      },
-      {
-        "name": "Showstopper",
-        "img": "assets/agents/raze/Showstopper.png",
-        "type": "Ultimate",
-        "cost": "6 Points",
-        "description": "Raze equips a single-use rocket launcher with the ability to one-shot enemies. Damage from this ability is consistent throughout the entire blast radius."
       }
     ]
   },
@@ -281,7 +243,6 @@
         "description": "Equip a resurrection ability. Fire with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health."
       }
     ]
-
   },
   {
     "name": "Sova",
@@ -352,5 +313,76 @@
         "description": "Equip a chemical sprayer. Fire to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it."
       }
     ]
+  },
+  {
+    "name": "Cypher",
+    "type": "Sentinel",
+    "img": "assets/agents/cypher/Cypher.png",
+    "abilities": [
+      {
+        "name": "Trapwire",
+        "img": "assets/agents/cypher/Trapwire.png",
+        "type": "Basic",
+        "cost": "200",
+        "description": "Equip a trapwire. Fire to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be redeployed."
+      },
+      {
+        "name": "Cyber Cage",
+        "img": "assets/agents/cypher/Cyber_Cage.png",
+        "type": "Basic",
+        "cost": "100",
+        "description": "Equip a cyber cage. Fire to toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it."
+      },
+      {
+        "name": "Spycam",
+        "img": "assets/agents/cypher/Spycam.png",
+        "type": "Signature",
+        "cost": "Free",
+        "description": "Equip a spycam. Fire to place the spycam at the targeted location. REUSE this ability to take control of the camera's view. While in control of the camera. Fire to shoot a marking dart. This dart will reveal the location of any player struck by the dart."
+      },
+      {
+        "name": "Neural Theft",
+        "img": "assets/agents/cypher/Neural_Theft.png",
+        "type": "Ultimate",
+        "cost": "7 Points",
+        "description": "Instantly use on a dead enemy player in your crosshairs to reveal the location of all living enemy players."
+      }
+    ]
+  },
+  {
+    "name": "Reyna",
+    "type": "Duelist",
+    "img": "assets/agents/reyna/Reyna.png",
+    "abilities": [
+      {
+        "name": "Leer",
+        "img": "assets/agents/reyna/Leer.png",
+        "type": "Basic",
+        "cost": "200",
+        "description": "Equip an ethereal destructible eye. Activate to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it."
+      },
+      {
+        "name": "Devour",
+        "img": "assets/agents/reyna/Devour.png",
+        "type": "Basic",
+        "cost": "100",
+        "description": "Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. Instantly consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If Empress is active, this skill will automatically cast and not consume the orb."
+      },
+      {
+        "name": "Dismiss",
+        "img": "assets/agents/reyna/Dismiss.png",
+        "type": "Signature",
+        "cost": "Free",
+        "description": "Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. Instantly consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If Empress is active, this skill will automatically cast and not consume the orb."
+      },
+      {
+        "name": "Empress",
+        "img": "assets/agents/reyna/Empress.png",
+        "type": "Ultimate",
+        "cost": "6 Points",
+        "description": "Instantly enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration."
+      }
+    ]
   }
+
 ]
