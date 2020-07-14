@@ -4,7 +4,5 @@
 
 Valorant Flutter application
 
-|   |   |   |
-| :---: | :---: | :---: |
-| ![](img/mockup1.png)  | ![](img/mockup2.png) | ![](img/mockup4.png) |
+![](img/ios_mockups.png)
 
