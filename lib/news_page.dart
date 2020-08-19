@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:html/parser.dart';
 import 'package:html/dom.dart' as dom;
+import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'web_page.dart';
 
@@ -28,11 +29,17 @@ class NewsPageState extends State<NewsPage> {
   final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
       new GlobalKey<RefreshIndicatorState>();
 
+  PackageInfo _packageInfo;
+
   @override
   void initState() {
     _refreshList();
-
+    _initPackageInfo();
     super.initState();
+  }
+
+  Future _initPackageInfo() async {
+    _packageInfo = await PackageInfo.fromPlatform();
   }
 
   Future<void> _refreshList() async {
@@ -42,6 +49,7 @@ class NewsPageState extends State<NewsPage> {
 
   @override
   Widget build(BuildContext context) {
+    _scaffoldContext = context;
     return _buildHome();
   }
 
@@ -53,6 +61,20 @@ class NewsPageState extends State<NewsPage> {
           centerTitle: true,
           pinned: true,
           backgroundColor: Theme.of(context).canvasColor,
+          actions: [
+            PopupMenuButton(
+              onSelected: (result) {
+                switch(result) {
+                  case 0:
+                    _showAbout();
+                    break;
+                }
+              },
+              itemBuilder: (context) => [
+                PopupMenuItem(child: Text('About'), value: 0)
+              ],
+            )
+          ],
         )
       ],
       body: _isLoading ? Center(child: CircularProgressIndicator())
@@ -113,6 +135,16 @@ class NewsPageState extends State<NewsPage> {
                           style: TextStyle(fontSize: 18, color: Colors.white)),
                       Text(news.date, style: TextStyle(color: Colors.white70))
                     ]))));
+  }
+
+  void _showAbout() {
+    showAboutDialog(
+      context: _scaffoldContext,
+      applicationName: 'LABORANT',
+      applicationIcon: Image.asset('assets/app_logo.png', width: 48, height: 48),
+      applicationVersion: _packageInfo.version,
+      applicationLegalese: 'Copyright 2020 Caleb Yun'
+    );
   }
 
   void _launchUrl(News news) async {
